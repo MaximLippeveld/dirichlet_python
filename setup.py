@@ -9,6 +9,9 @@ ver_path = convert_path('dirichletcal/version.py')
 with open(ver_path) as ver_file:
     exec(ver_file.read(), main_ns)
 
+with open("requirements.txt") as reqs:
+    requires = [x for x in reqs.read().split("|") if len(x) > 1]
+
 setuptools.setup(
     name='dirichletcal',
     version=main_ns['__version__'],
@@ -28,12 +31,5 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     python_requires='>=3.6',
-    install_requires = [
-        'numpy>=1.14.2,<1.14.3'
-        'scipy>=1.0.0,<1.0.1'
-        'scikit-learn>=0.19.1,<0.19.2'
-        'jax'
-        'jaxlib'
-        'autograd'
-    ]
+    install_requires = requires
 )
