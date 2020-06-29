@@ -5,7 +5,7 @@ with open("README.md", 'r') as f:
     long_description = f.read()
 
 main_ns = {}
-ver_path = convert_path('dirichletcal/version.py')
+ver_path = convert_path('dirichlet/version.py')
 with open(ver_path) as ver_file:
     exec(ver_file.read(), main_ns)
 
@@ -13,7 +13,7 @@ with open("requirements.txt") as reqs:
     requires = [x for x in reqs.read().split("|") if len(x) > 1]
 
 setuptools.setup(
-    name='dirichletcal',
+    name='dirichlet',
     version=main_ns['__version__'],
     author='Miquel Perello Nieto and Hao Song',
     author_email='perello.nieto@gmail.com',

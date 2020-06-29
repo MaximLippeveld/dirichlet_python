@@ -8,6 +8,8 @@ from .calib.diagdirichlet import DiagonalDirichletCalibrator
 from .calib.fixeddirichlet import FixedDiagonalDirichletCalibrator
 from .calib.gendirichlet import GenerativeDirichletCalibrator
 
+from . import calib
+
 
 class DirichletCalibrator(BaseEstimator, RegressorMixin):
     def __init__(self, matrix_type='full', l2=0.0, comp_l2=False,
