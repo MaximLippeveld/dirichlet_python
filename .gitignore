@@ -4,7 +4,7 @@
 # Build folders
 venv/
 build/
-dirichletcal.egg-info/
+dirichlet.egg-info/
 dist/
 venvtest/
 
